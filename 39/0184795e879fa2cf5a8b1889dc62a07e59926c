@@ -1,0 +1,142 @@
+src/workflows/garmin-activities.py
+  s_7dd9c73a566c81::t_7f7362b165cc4d 11 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a4f7a126b85d8bea80eefe1","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":11}]}]}
+src/workflows/sleep-data.py
+  s_7dd9c73a566c81::t_4312a714bc382d 9,17-18 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a4f7a056b85d8bea80eefca","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":9},{"Range":[17,18]}]}]}
+.github/workflows/sync_garmin_to_notion.yml
+  s_7dd9c73a566c81::t_b81405ad0ce09b 12,35 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a4f79fb6b85d8bea80eefad","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":12},{"Single":35}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "390184795e879fa2cf5a8b1889dc62a07e59926c",
+  "prompts": {},
+  "sessions": {
+    "s_7dd9c73a566c81": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a4f47ff6b85d8bea80ee691",
+        "model": "gpt-5.5__max"
+      },
+      "human_author": "17631153498 <linyan7890ly@gmail.com>"
+    }
+  },
+  "attestation_metadata": {
+    ".github/workflows/sync_garmin_to_notion.yml": [
+      {
+        "hash": "s_7dd9c73a566c81::t_b81405ad0ce09b",
+        "line_ranges": [
+          {
+            "Single": 12
+          },
+          {
+            "Single": 35
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a4f79fb6b85d8bea80eefad",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 12
+              },
+              {
+                "Single": 35
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/workflows/garmin-activities.py": [
+      {
+        "hash": "s_7dd9c73a566c81::t_7f7362b165cc4d",
+        "line_ranges": [
+          {
+            "Single": 11
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a4f7a126b85d8bea80eefe1",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 11
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/workflows/sleep-data.py": [
+      {
+        "hash": "s_7dd9c73a566c81::t_4312a714bc382d",
+        "line_ranges": [
+          {
+            "Single": 9
+          },
+          {
+            "Range": [
+              17,
+              18
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a4f7a056b85d8bea80eefca",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 9
+              },
+              {
+                "Range": [
+                  17,
+                  18
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_7dd9c73a566c81": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7dd9c73a566c81::t_4312a714bc382d": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7dd9c73a566c81::t_7f7362b165cc4d": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7dd9c73a566c81::t_b81405ad0ce09b": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
