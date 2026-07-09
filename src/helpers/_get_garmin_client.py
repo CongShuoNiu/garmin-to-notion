@@ -5,9 +5,13 @@ from dotenv import load_dotenv
 from garminconnect import Garmin
 
 
+GARMIN_IS_CN = True
+
+
 @dataclass(frozen=True)
 class GarminConfiguration:
     activity_fetch_limit: int
+    is_cn: bool
 
 
 def get_garmin_client() -> tuple[Garmin, GarminConfiguration]:
@@ -25,7 +29,7 @@ def get_garmin_client() -> tuple[Garmin, GarminConfiguration]:
 
 
 def _get_garmin_client() -> Garmin:
-    """使用 GARMIN_AUTH_TOKEN 初始化 Garmin 客户端，避免运行时走邮箱密码登录。"""
+    """使用中国区 Garmin token 初始化客户端，避免运行时走邮箱密码登录。"""
     garmin_auth_token = os.getenv("GARMIN_AUTH_TOKEN")
 
     if not garmin_auth_token:
@@ -35,6 +39,7 @@ def _get_garmin_client() -> Garmin:
         )
 
     # GARMIN_AUTH_TOKEN 以 JSON 字符串形式传入，运行时无需再次使用邮箱密码登录。
+    # is_cn=True 会让 activities、sleep、steps、PR 等所有调用统一访问中国区 Garmin。
     # GARMIN_AUTH_TOKEN is passed as an inline JSON string (>512 chars), so the
     # library treats it as token data rather than a file path. This means the
     # access token is refreshed in memory on each run via diauth.garmin.com
@@ -46,7 +51,7 @@ def _get_garmin_client() -> Garmin:
     # 401s, we might need to add a workflow step that writes the updated token
     # back to the GARMIN_AUTH_TOKEN secret after each run via `gh secret set`,
     # or otherwise persist the token across runs.
-    garmin_client = Garmin()
+    garmin_client = Garmin(is_cn=GARMIN_IS_CN)
     garmin_client.login(tokenstore=garmin_auth_token)
 
     return garmin_client
@@ -56,4 +61,5 @@ def _get_garmin_configuration():
     """读取 Garmin 同步相关配置。"""
     return GarminConfiguration(
         activity_fetch_limit=int(os.getenv("GARMIN_ACTIVITIES_FETCH_LIMIT", "10")),
+        is_cn=GARMIN_IS_CN,
     )

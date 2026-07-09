@@ -92,6 +92,7 @@ def main():
     load_dotenv()
 
     # Initialize Garmin and Notion clients using environment variables
+    # get_garmin_client 内部已设置 is_cn=True，睡眠数据会从中国区 Garmin 拉取。
     garmin_client, _ = get_garmin_client()
     notion_client, notion_dbs = get_notion_client()
 

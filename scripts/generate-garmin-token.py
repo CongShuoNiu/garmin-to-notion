@@ -11,6 +11,8 @@ from garminconnect import Garmin
 client = Garmin(
     input("Garmin email: "),
     getpass.getpass("Garmin password: "),
+    # 中国区 Garmin 账号需要使用 Garmin China 登录端点生成 token。
+    is_cn=True,
     # 如果 Garmin 账号没有开启双重认证，看到 MFA code 提示时直接回车即可。
     prompt_mfa=lambda: input("MFA code: "),
 )
