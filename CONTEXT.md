@@ -24,14 +24,26 @@ _Avoid_: Sleep tracker, sleep metrics only
 A token generated after Garmin login that lets the workflow reuse an authenticated session.
 _Avoid_: Password, credential, auth JSON
 
-**Environment Secret / 环境 Secret**:
-A protected configuration value stored in GitHub Actions secrets and read by the sync workflow.
-_Avoid_: Environment variable only, config value
+**GitHub Actions Secret / GitHub Actions Secret**:
+A sensitive protected configuration value stored in GitHub Actions secrets, such as `NOTION_TOKEN` or `GARMIN_AUTH_TOKEN`.
+_Avoid_: Database ID, public config value, variable
+
+**GitHub Actions Variable / GitHub Actions Variable**:
+A non-sensitive workflow configuration value stored in GitHub Actions variables, such as Notion database IDs.
+_Avoid_: Secret, token
 
 **Notion Integration / Notion integration**:
 The Notion API connection that grants this project access to selected Notion databases.
 _Avoid_: Notion app, Notion plugin
 
+**Notion Integration Token / Notion integration token**:
+The `ntn_...` secret value that authenticates the Notion integration.
+_Avoid_: Database ID, page ID
+
 **Notion Database / Notion 数据库**:
 The target Notion database that receives synchronized Garmin data.
 _Avoid_: Table only, page only
+
+**Notion Database ID / Notion database ID**:
+The ID copied from a Notion database URL before the `?v=` view parameter.
+_Avoid_: `ntn_...` token, view ID, connection ID

@@ -44,7 +44,7 @@ The database ID is the long string after the workspace name and before `?v`.
 
 Configure these GitHub Actions variables or secrets. Database IDs are not sensitive, so repository variables are recommended. The workflow reads variables first and falls back to secrets.
 
-| Secret | Required | Description |
+| Name | Required | Description |
 | --- | --- | --- |
 | `NOTION_DB_ID` | Yes | Activities database ID |
 | `NOTION_PR_DB_ID` | Yes | Personal Records database ID |
@@ -145,7 +145,7 @@ https://www.notion.so/workspace/1234567890abcdef1234567890abcdef?v=...
 
 需要配置以下 GitHub Actions variables 或 secrets。数据库 ID 不属于敏感信息，推荐放到仓库 Variables。当前 workflow 会优先读取 Variables，再回退读取 Secrets。
 
-| Secret | 是否必需 | 说明 |
+| Name | 是否必需 | 说明 |
 | --- | --- | --- |
 | `NOTION_DB_ID` | 是 | Activities 数据库 ID |
 | `NOTION_PR_DB_ID` | 是 | Personal Records 数据库 ID |
