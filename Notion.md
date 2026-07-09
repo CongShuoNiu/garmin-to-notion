@@ -42,7 +42,7 @@ https://www.notion.so/workspace/1234567890abcdef1234567890abcdef?v=...
 
 The database ID is the long string after the workspace name and before `?v`.
 
-Configure these GitHub Actions secrets:
+Configure these GitHub Actions variables or secrets. Database IDs are not sensitive, so repository variables are recommended. The workflow reads variables first and falls back to secrets.
 
 | Secret | Required | Description |
 | --- | --- | --- |
@@ -63,18 +63,19 @@ Copy the full JSON token printed by the script and save it as the GitHub Actions
 
 If your Garmin account does not use two-factor authentication, press Enter when the script asks for `MFA code`.
 
-## 6. Configure GitHub Actions Secrets
+## 6. Configure GitHub Actions Secrets and Variables
 
 In your GitHub repository:
 
 1. Go to **Settings**.
 2. Open **Secrets and variables -> Actions**.
-3. Add the required secrets:
+3. Add secrets for sensitive values:
    - `GARMIN_AUTH_TOKEN`
    - `NOTION_TOKEN`
+4. Add variables for database IDs:
    - `NOTION_DB_ID`
    - `NOTION_PR_DB_ID`
-4. Add optional secrets if you use those databases:
+5. Add optional variables if you use those databases:
    - `NOTION_STEPS_DB_ID`
    - `NOTION_SLEEP_DB_ID`
 
@@ -142,7 +143,7 @@ https://www.notion.so/workspace/1234567890abcdef1234567890abcdef?v=...
 
 数据库 ID 是 workspace 名称之后、`?v` 之前的长字符串。
 
-需要配置以下 GitHub Actions secrets：
+需要配置以下 GitHub Actions variables 或 secrets。数据库 ID 不属于敏感信息，推荐放到仓库 Variables。当前 workflow 会优先读取 Variables，再回退读取 Secrets。
 
 | Secret | 是否必需 | 说明 |
 | --- | --- | --- |
@@ -163,18 +164,19 @@ uv run https://raw.githubusercontent.com/CongShuoNiu/garmin-to-notion/main/scrip
 
 如果 Garmin 账号没有开启双重认证，脚本提示 `MFA code` 时直接回车即可。
 
-## 6. 配置 GitHub Actions Secrets
+## 6. 配置 GitHub Actions Secrets 和 Variables
 
 在你的 GitHub 仓库中：
 
 1. 进入 **Settings**。
 2. 打开 **Secrets and variables -> Actions**。
-3. 添加必需 secrets：
+3. 将敏感值添加到 Secrets：
    - `GARMIN_AUTH_TOKEN`
    - `NOTION_TOKEN`
+4. 将数据库 ID 添加到 Variables：
    - `NOTION_DB_ID`
    - `NOTION_PR_DB_ID`
-4. 如果使用可选数据库，再添加：
+5. 如果使用可选数据库，再添加 Variables：
    - `NOTION_STEPS_DB_ID`
    - `NOTION_SLEEP_DB_ID`
 
