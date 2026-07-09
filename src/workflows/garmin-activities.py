@@ -8,7 +8,7 @@ from notion_client import Client as NotionClient
 from src.helpers import get_garmin_client, get_notion_client
 
 # Your local time zone, replace with the appropriate one if needed
-local_tz = pytz.timezone('America/Toronto')
+local_tz = pytz.timezone('Asia/Shanghai')
 
 ACTIVITY_ICONS = {
     "Barre": "https://img.icons8.com/?size=100&id=66924&format=png&color=000000",

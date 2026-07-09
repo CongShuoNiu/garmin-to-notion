@@ -6,7 +6,7 @@ from dotenv import load_dotenv, dotenv_values
 from src.helpers import get_garmin_client, get_notion_client
 
 # Constants
-local_tz = pytz.timezone("America/Toronto")
+local_tz = pytz.timezone("Asia/Shanghai")
 
 # Load environment variables
 load_dotenv()
@@ -14,8 +14,8 @@ CONFIG = dotenv_values()
 
 
 def get_sleep_data(garmin):
-    """获取当天的 Garmin 睡眠数据。"""
-    today = datetime.today().date()
+    """按中国时区获取当天的 Garmin 睡眠数据。"""
+    today = datetime.now(local_tz).date()
     return garmin.get_sleep_data(today.isoformat())
 
 
