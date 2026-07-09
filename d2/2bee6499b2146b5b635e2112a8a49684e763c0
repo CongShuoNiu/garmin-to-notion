@@ -1,0 +1,274 @@
+src/workflows/daily-steps.py
+  s_7dd9c73a566c81::t_145bd1faa38291 102 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a4f54996b85d8bea80eea60","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":102}]}]}
+src/workflows/personal-records.py
+  s_7dd9c73a566c81::t_bf94dca80ef1e1 254,311 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a4f549f6b85d8bea80eea78","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":254},{"Single":311}]}]}
+src/workflows/garmin-activities.py
+  s_7dd9c73a566c81::t_35e96f11d20248 294 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a4f54706b85d8bea80eea13","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":294}]}]}
+scripts/generate-garmin-token.py
+  s_7dd9c73a566c81::t_151104f43884fd 14-15 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a4f54456b85d8bea80ee9d6","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Range":[14,15]}]}]}
+src/helpers/_get_garmin_client.py
+  s_7dd9c73a566c81::t_5292941aad05aa 8-10,14,32,42,54,64 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a4f544c6b85d8bea80ee9ee","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Range":[8,10]},{"Single":14},{"Single":32},{"Single":42},{"Single":54},{"Single":64}]}]}
+src/workflows/sleep-data.py
+  s_7dd9c73a566c81::t_a845b0acf6d418 95,109 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a4f547f6b85d8bea80eea2c","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":95},{"Single":109}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "d22bee6499b2146b5b635e2112a8a49684e763c0",
+  "prompts": {},
+  "sessions": {
+    "s_7dd9c73a566c81": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a4f47ff6b85d8bea80ee691",
+        "model": "gpt-5.5__max"
+      },
+      "human_author": "17631153498 <linyan7890ly@gmail.com>"
+    }
+  },
+  "attestation_metadata": {
+    "scripts/generate-garmin-token.py": [
+      {
+        "hash": "s_7dd9c73a566c81::t_151104f43884fd",
+        "line_ranges": [
+          {
+            "Range": [
+              14,
+              15
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a4f54456b85d8bea80ee9d6",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Range": [
+                  14,
+                  15
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/helpers/_get_garmin_client.py": [
+      {
+        "hash": "s_7dd9c73a566c81::t_5292941aad05aa",
+        "line_ranges": [
+          {
+            "Range": [
+              8,
+              10
+            ]
+          },
+          {
+            "Single": 14
+          },
+          {
+            "Single": 32
+          },
+          {
+            "Single": 42
+          },
+          {
+            "Single": 54
+          },
+          {
+            "Single": 64
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a4f544c6b85d8bea80ee9ee",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Range": [
+                  8,
+                  10
+                ]
+              },
+              {
+                "Single": 14
+              },
+              {
+                "Single": 32
+              },
+              {
+                "Single": 42
+              },
+              {
+                "Single": 54
+              },
+              {
+                "Single": 64
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/workflows/daily-steps.py": [
+      {
+        "hash": "s_7dd9c73a566c81::t_145bd1faa38291",
+        "line_ranges": [
+          {
+            "Single": 102
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a4f54996b85d8bea80eea60",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 102
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/workflows/garmin-activities.py": [
+      {
+        "hash": "s_7dd9c73a566c81::t_35e96f11d20248",
+        "line_ranges": [
+          {
+            "Single": 294
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a4f54706b85d8bea80eea13",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 294
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/workflows/personal-records.py": [
+      {
+        "hash": "s_7dd9c73a566c81::t_bf94dca80ef1e1",
+        "line_ranges": [
+          {
+            "Single": 254
+          },
+          {
+            "Single": 311
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a4f549f6b85d8bea80eea78",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 254
+              },
+              {
+                "Single": 311
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/workflows/sleep-data.py": [
+      {
+        "hash": "s_7dd9c73a566c81::t_a845b0acf6d418",
+        "line_ranges": [
+          {
+            "Single": 95
+          },
+          {
+            "Single": 109
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a4f547f6b85d8bea80eea2c",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 95
+              },
+              {
+                "Single": 109
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_7dd9c73a566c81": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7dd9c73a566c81::t_145bd1faa38291": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7dd9c73a566c81::t_151104f43884fd": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7dd9c73a566c81::t_35e96f11d20248": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7dd9c73a566c81::t_5292941aad05aa": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7dd9c73a566c81::t_a845b0acf6d418": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7dd9c73a566c81::t_bf94dca80ef1e1": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
