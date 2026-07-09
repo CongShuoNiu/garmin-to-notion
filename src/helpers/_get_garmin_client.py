@@ -11,6 +11,7 @@ class GarminConfiguration:
 
 
 def get_garmin_client() -> tuple[Garmin, GarminConfiguration]:
+    """加载 Garmin 客户端和运行配置。"""
     load_dotenv()
 
     print("Initializing Garmin client...")
@@ -24,6 +25,7 @@ def get_garmin_client() -> tuple[Garmin, GarminConfiguration]:
 
 
 def _get_garmin_client() -> Garmin:
+    """使用 GARMIN_AUTH_TOKEN 初始化 Garmin 客户端，避免运行时走邮箱密码登录。"""
     garmin_auth_token = os.getenv("GARMIN_AUTH_TOKEN")
 
     if not garmin_auth_token:
@@ -32,6 +34,7 @@ def _get_garmin_client() -> Garmin:
             "See README_AUTH_SETUP.md for instructions on generating a token."
         )
 
+    # GARMIN_AUTH_TOKEN 以 JSON 字符串形式传入，运行时无需再次使用邮箱密码登录。
     # GARMIN_AUTH_TOKEN is passed as an inline JSON string (>512 chars), so the
     # library treats it as token data rather than a file path. This means the
     # access token is refreshed in memory on each run via diauth.garmin.com
@@ -50,6 +53,7 @@ def _get_garmin_client() -> Garmin:
 
 
 def _get_garmin_configuration():
+    """读取 Garmin 同步相关配置。"""
     return GarminConfiguration(
         activity_fetch_limit=int(os.getenv("GARMIN_ACTIVITIES_FETCH_LIMIT", "10")),
     )

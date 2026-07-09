@@ -7,13 +7,16 @@ import pathlib
 
 from garminconnect import Garmin
 
+# 该脚本只用于首次生成 GARMIN_AUTH_TOKEN；日常同步会复用生成后的 token。
 client = Garmin(
     input("Garmin email: "),
     getpass.getpass("Garmin password: "),
+    # 如果 Garmin 账号没有开启双重认证，看到 MFA code 提示时直接回车即可。
     prompt_mfa=lambda: input("MFA code: "),
 )
 client.login("~/.garminconnect")
 
+# garminconnect 会把登录后的 token 写入 ~/.garminconnect/garmin_tokens.json。
 token = pathlib.Path.home().joinpath(".garminconnect", "garmin_tokens.json").read_text()
 
 print()
