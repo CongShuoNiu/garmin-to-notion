@@ -8,6 +8,10 @@ This context defines the project-specific language used in the documentation. It
 A workout or activity record pulled from Garmin Connect and synchronized into Notion.
 _Avoid_: Workout only, exercise only, Garmin data
 
+**Activity Type / Activity Type**:
+The top-level Notion select value used to group Garmin activities. It must match one of the options configured in the Notion database; unsupported Garmin types are grouped as `Other`.
+_Avoid_: Raw Garmin type, activity subtype
+
 **Personal Record / 个人记录**:
 A best-performance result extracted from Garmin activity data, such as fastest 1K or longest ride.
 _Avoid_: PR only, achievement, milestone

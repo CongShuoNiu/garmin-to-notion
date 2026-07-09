@@ -32,12 +32,29 @@ ACTIVITY_ICONS = {
     # Add more mappings as needed
 }
 
+NOTION_ACTIVITY_TYPES = {
+    "Breathwork",
+    "Relaxation",
+    "Cardio",
+    "Cycling",
+    "Hiking",
+    "Rowing",
+    "Running",
+    "Strength",
+    "Stretching",
+    "Swimming",
+    "Walking",
+    "Yoga/Pilates",
+    "Other",
+}
+
 
 def get_all_activities(garmin_client: GarminClient, limit: int = 1000) -> list[dict]:
     return garmin_client.get_activities(0, limit)
 
 
 def format_activity_type(activity_type: str, activity_name: str = "") -> tuple[str, str]:
+    """将 Garmin 活动类型映射到 Notion 模板允许的活动主类型和子类型。"""
     # First format the activity type as before
     formatted_type = activity_type.replace('_', ' ').title() if activity_type else "Unknown"
 
@@ -77,6 +94,10 @@ def format_activity_type(activity_type: str, activity_name: str = "") -> tuple[s
         return "Strength", "Barre"
     if activity_name and "stretch" in activity_name.lower():
         return "Stretching", "Stretching"
+
+    # Notion 的 Activity Type 是固定 select；未知 Garmin 类型统一归为 Other，避免查询或写入时报错。
+    if activity_type not in NOTION_ACTIVITY_TYPES:
+        return "Other", "Other"
 
     return activity_type, activity_subtype
 
