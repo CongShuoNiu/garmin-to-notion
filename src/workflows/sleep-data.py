@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import UTC, datetime
 
 import pytz
 from dotenv import load_dotenv, dotenv_values
@@ -14,23 +14,27 @@ CONFIG = dotenv_values()
 
 
 def get_sleep_data(garmin):
+    """获取当天的 Garmin 睡眠数据。"""
     today = datetime.today().date()
     return garmin.get_sleep_data(today.isoformat())
 
 
 def format_duration(seconds):
+    """将秒数格式化为 Notion 中展示用的小时和分钟。"""
     minutes = (seconds or 0) // 60
     return f"{minutes // 60}h {minutes % 60}m"
 
 
 def format_time(timestamp):
+    """将 Garmin 毫秒时间戳格式化为 Notion 需要的 UTC ISO 时间。"""
     return (
-        datetime.utcfromtimestamp(timestamp / 1000).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+        datetime.fromtimestamp(timestamp / 1000, UTC).strftime("%Y-%m-%dT%H:%M:%S.000Z")
         if timestamp else None
     )
 
 
 def format_time_readable(timestamp):
+    """将 Garmin 毫秒时间戳格式化为本地时区的可读时间。"""
     return (
         datetime.fromtimestamp(timestamp / 1000, local_tz).strftime("%H:%M")
         if timestamp else "Unknown"
@@ -38,6 +42,7 @@ def format_time_readable(timestamp):
 
 
 def format_date_for_name(sleep_date):
+    """将睡眠日期格式化为 Notion 页面标题中的日期格式。"""
     return datetime.strptime(sleep_date, "%Y-%m-%d").strftime("%d.%m.%Y") if sleep_date else "Unknown"
 
 
