@@ -11,7 +11,7 @@
 打开终端并运行以下命令：
 
 ```shell
-uv run https://raw.githubusercontent.com/chloevoyer/garmin-to-notion/main/scripts/generate-garmin-token.py
+uv run https://raw.githubusercontent.com/CongShuoNiu/garmin-to-notion/main/scripts/generate-garmin-token.py
 ```
 
 系统会提示你输入：

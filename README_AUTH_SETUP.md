@@ -13,7 +13,7 @@ again.
 Open a terminal and run the following command:
 
 ```shell
-uv run https://raw.githubusercontent.com/chloevoyer/garmin-to-notion/main/scripts/generate-garmin-token.py
+uv run https://raw.githubusercontent.com/CongShuoNiu/garmin-to-notion/main/scripts/generate-garmin-token.py
 ```
 
 You will be prompted for:
