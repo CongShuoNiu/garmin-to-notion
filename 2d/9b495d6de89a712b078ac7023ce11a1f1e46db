@@ -1,0 +1,66 @@
+Notion.md
+  s_7dd9c73a566c81::t_eb0dc3ff26135f 1-197 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a4f604f6b85d8bea80eeb6a","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Range":[1,197]}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "2d9b495d6de89a712b078ac7023ce11a1f1e46db",
+  "prompts": {},
+  "sessions": {
+    "s_7dd9c73a566c81": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a4f47ff6b85d8bea80ee691",
+        "model": "gpt-5.5__max"
+      },
+      "human_author": "17631153498 <linyan7890ly@gmail.com>"
+    }
+  },
+  "attestation_metadata": {
+    "Notion.md": [
+      {
+        "hash": "s_7dd9c73a566c81::t_eb0dc3ff26135f",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              197
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a4f604f6b85d8bea80eeb6a",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  197
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_7dd9c73a566c81": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7dd9c73a566c81::t_eb0dc3ff26135f": {
+      "tool": "trae",
+      "conversation_id": "6a4f47ff6b85d8bea80ee691",
+      "session_id": "6a4f47ff6b85d8bea80ee691",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
